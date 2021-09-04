@@ -1,4 +1,5 @@
 // Iteration #1: Find the maximum
+
 function maxOfTwoNumbers(nb1, nb2) {
   if(nb1 > nb2) {
     return (nb1)
@@ -7,7 +8,6 @@ function maxOfTwoNumbers(nb1, nb2) {
   }
 }
 maxOfTwoNumbers();
-
 
 
 
@@ -32,19 +32,23 @@ function findLongestWord(arr) {
 }
 
 
-
-  
-
-
-
-
-
-
-
 // Iteration #3: Calculate the sum
+
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(array) {
+  
+  if (array.length === 0) {
+    return(0);
+  } 
+  else {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    return(sum);
+  }
+}
 
 
 
