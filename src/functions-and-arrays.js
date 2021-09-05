@@ -103,29 +103,53 @@ function averageWordLength(array) {
 // Bonus - Iteration #4.1
 function avg() {}
 
+
 // Iteration #5: Unique arrays
 const wordsUnique = [
-  'crab',
-  'poison',
-  'contagious',
-  'simple',
-  'bring',
-  'sharp',
-  'playground',
-  'poison',
-  'communion',
-  'simple',
-  'bring'
+  "crab",
+  "poison",
+  "contagious",
+  "simple",
+  "bring",
+  "sharp",
+  "playground",
+  "poison",
+  "communion",
+  "simple",
+  "bring"
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(array) {
+  if (array.length === 0) {
+    return(null);
+  } else {
+    var newArray = array.slice(); //copy of array
+    for(let i = 0, max = newArray.length; i < max; i++) {
+      if(newArray.indexOf(newArray[i]) != newArray.lastIndexOf(newArray[i])) {
+         newArray.splice(newArray.indexOf(newArray[i]), 1);
+         i--;
+      }
+   }
+   return newArray;
+  }
+}
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(array, word) {
+  if (array.length === 0) {
+    return(null);
+  } 
+  else if (array.includes(word)) {
+         return (true);
+      } else {
+        return (false);
+      }
+    } 
+
 
 
 
