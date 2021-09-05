@@ -154,21 +154,15 @@ function doesWordExist(array, word) {
 
 
 // Iteration #7: Count repetition
-const wordsCount = [
-  'machine',
-  'matter',
-  'subset',
-  'trouble',
-  'starting',
-  'matter',
-  'eating',
-  'matter',
-  'truth',
-  'disobedience',
-  'matter'
-];
-
-function howManyTimes() {}
+function howManyTimes(array, word) {
+  let total = 0;
+  for (i = 0; i < array.length; i++) {
+    if (array[i] === word) {
+      total += 1;
+    }
+  }
+return (total);
+}
 
 
 
