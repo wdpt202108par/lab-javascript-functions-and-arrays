@@ -6,28 +6,17 @@ function maxOfTwoNumbers(num1, num2) {
 
 
 // Iteration #2: Find longest word
-function findLongestWord(words){
+const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-  // Initialiser une variable vide, qui contiendra le mot recherché
-  let longestWord = "";
-  
-  // Lancer la boucle afin de passer les mots du tableau en revue
-  for(let i = 0; i < words.length; i++){
-    
-// Définir la condition, si la longueur du mot > longueur du mot contenue dans variable Longest world
-  if(words[i].length > longestWord.length){
-
-    // alors actualisation de ma variable -ajout du dernier mot, + écrase auto le précédent -
-  longestWord = words[i];
-  }
-    
-    // retourner la valeur la plus longue, et fin de la fonction
-  }return longestWord; 
-}
-
-// @ Claire Pour tester dans CodePen 
-let words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot']
-console.log(findLongestWord(words));
+function findLongestWord(words) {
+  let longestWord = [];
+  for (i = 0; i < words.length; i++) {
+          if (words[i].length > 0){
+            longestWord= arr[i].length;
+          }
+      }
+      return longestWord;
+    }
   
 
 
@@ -35,24 +24,9 @@ console.log(findLongestWord(words));
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers(numbers) {
-  
-  // Initialiser une variable vide, qui contiendra le résultat de la somme des valeurs du tableau
-  let sum =0;
-  
-   // Lancer la boucle afin de passer les nombres du tableau en revue
-  for (let i=0; i<numbers.length; i++){
-    
-  // Additionner systématiquement le nombre à valeur de ma variable sum
-       sum=sum+numbers[i];
-  }
-  
-  return sum; 
- 
-}
- 
-// @ Claire Pour tester dans CodePen
-console.log(sumNumbers(numbers));
+function sumNumbers() {}
+
+
 
 // Iteration #3.1 Bonus:
 function sum() {}
@@ -60,70 +34,21 @@ function sum() {}
 
 
 // Iteration #4: Calculate the average
-
 // Level 1: Array of numbers
-function averageNumbers(numbersAvg) {
-  
-  // Lancer la fonction précédente sum et diviser par le nombre de valeur dans le tableau
- return sumNumbers(numbersAvg)/numbersAvg.length
-}
-
-// Pour tester dans CodePen
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
-console.log(averageNumbers(numbersAvg));
 
-
+function averageNumbers() {}
 
 
 // Level 2: Array of strings
+const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength(wordsArr) {
-  //Initialiser variable à 0 qui stockera la somme des caractères des éléments du tableau
-    let wordsArrSum=0;
-    
-    //Lancer la boucle 
-  for (let i=0; i<wordsArr.length; i++){
-    
-    //additionner le nombre de caractères pour chaque nouveau mot
-    wordsArrSum = wordsArrSum+wordsArr[i].length }
-    
-    //effectuer la moyenne et retoruner sa valeur
-   return wordsArrSum/wordsArr.length;
-  } 
-  
-  
-  
-  // Pour tester dans Codepen
-  const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
-  console.log(averageWordLength(wordsArr));
+function averageWordLength() { }
 
 // Bonus - Iteration #4.1
 function avg() {}
 
 // Iteration #5: Unique arrays
-
-
-function uniquifyArray (wordsUnique) {
-  
-  //Initialiser variable, tableau vide qui stockera les valeurs uniques
-  let arrayWordsUnique =[];
-  
-  //Lancer la boucle pour passer en revue chaque mot
-  for(let i = 0; i < wordsUnique.length; i++){
-    
-    //Definir condition, si l'index du mot ressort -1  
-    if (arrayWordsUnique.indexOf(wordsUnique[i]) === -1) {
-      
-      // Alors c'est un nouveau mot, et doit être intégrer dans le tableau
-        arrayWordsUnique.push(wordsUnique[i]);
-    } 
-    }
-  
-  // Retourer le nouveau tableau de valeurs uniques
-  return arrayWordsUnique;
-}
-
-//Pour tester dans Codepen
 const wordsUnique = [
   'crab',
   'poison',
@@ -138,60 +63,18 @@ const wordsUnique = [
   'bring'
 ];
 
-console.log(uniquifyArray(wordsUnique))
+function uniquifyArray() {}
 
 
 
 // Iteration #6: Find elements
-
-function doesWordExist(wordsfind,word) {
-  
-  // Lancer la boucle qui passe en revue les éléments du tableau 
-  for(let i=0; i<wordsfind.length; i++) {
-    
-    //Si le mot saisi est déjà dans le tableau
-    if(word===wordsfind[i]){
-      
-     // Alors retourner la valeur VRAI
-      return true;
-      
-      // Dans le cas contraire retourner la valeur FAUX
-    }else {
-          return false
-        }
-        }
-      }
-
-// Pour tester dans CodePen
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
-console.log(doesWordExist(wordsFind,"machine"));
-console.log(doesWordExist(wordsFind,"javascript"));
+
+function doesWordExist() {}
 
 
 
 // Iteration #7: Count repetition
-function howManyTimes(wordsCount,word) {
-  
-  // Initialiser variable qui stockera le nombre de répétitions
-  let counter = 0
-  
-    // Lancer la boucle
-  for (let i=0; i<wordsCount.length;i++){
-    
-    //Si le mot recherché est identique au mot du tableau
-    if (word===wordsCount[i]){
-      
-      //alors compter une réccurence
-      counter=counter+1;
-      
-    }
-  }
-  // Retourner le nombre de récurrences
-  return counter
-}
-
-
-// Pour tester dans CodePen
 const wordsCount = [
   'machine',
   'matter',
@@ -206,7 +89,7 @@ const wordsCount = [
   'matter'
 ];
 
-console.log(howManyTimes(wordsCount,"matter"))
+function howManyTimes() {}
 
 
 
