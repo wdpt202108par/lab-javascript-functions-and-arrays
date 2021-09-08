@@ -31,7 +31,7 @@ const wordsList = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orcha
 // Iteration #3: Calculate the sum
 function sumNumbers(arr) {
   let count = 0;
-    for (i= 0; i < arr.length; i++) {
+    for (let i= 0; i < arr.length; i++) {
       count += arr[i];
     }
   return count
@@ -44,7 +44,7 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 // Iteration #3.1 Bonus:
 function sum(someArr) {
   let count = 0;
-  for (i= 0; i < someArr.length; i++) {
+  for (let i= 0; i < someArr.length; i++) {
     if (typeof someArr[i] === "string") {
       count += someArr[i].length;
     } else if (someArr[i] === true) {
@@ -67,12 +67,10 @@ const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 function averageNumbers(newArr) {
-  let average;
   if (newArr.length === 0) {
     return null;
-  } else {
-    return average = sumNumbers(newArr) / newArr.length;
   }
+  return sumNumbers(newArr) / newArr.length;
 } 
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
@@ -83,7 +81,7 @@ function averageWordLength(tab) {
     return null;
   }
   let lettersCount = 0;
-  for (i = 0; i < tab.length; i ++) {
+  for (let i = 0; i < tab.length; i ++) {
     lettersCount += tab[i].length;
   }
   return lettersCount / tab.length;
@@ -94,16 +92,21 @@ const words = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart',
 
 // Bonus - Iteration #4.1
 function avg(someTab) {
+  if (someTab.length === 0) {
+    return null;
+  }
   let mixedAverage = sum(someTab) / someTab.length;
   return Math.round(mixedAverage*100) / 100;
 }
 
 // Iteration #5: Unique arrays
 function uniquifyArray(mixTab) {
+  if (mixTab.length === 0) {
+    return null;
+  }
   let uniqueExemplarWordArr = [];
-
-  for (i= 0; i < mixTab.length; i++) {
-    if (uniqueExemplarWordArr.indexOf(mixTab[i] === -1)) {
+  for (let i= 0; i < mixTab.length; i++) {
+    if (uniqueExemplarWordArr.indexOf(mixTab[i]) === -1) {
     uniqueExemplarWordArr.push(mixTab[i]);
     }
   }
@@ -128,8 +131,15 @@ const wordsMix = [
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
-
+function doesWordExist(findTab,searchWord) {
+  if (findTab.length === 0) {
+    return null;
+  } else if (findTab.includes(searchWord) === true) {
+      return true;
+  } else {
+    return false;
+  }
+}
 
 
 // Iteration #7: Count repetition
@@ -147,8 +157,16 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(newTab, searchTerm) {
 
+  let wordsCounter = 0;
+  for (let i = 0; i < newTab.length; i++ ) {
+    if (newTab[i] === searchTerm) {
+      wordsCounter++;
+    }
+  }
+  return wordsCounter
+}  
 
 
 // Iteration #8: Bonus
