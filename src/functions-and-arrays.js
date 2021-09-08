@@ -44,7 +44,7 @@ function sumNumbers(numbers) {
   for (let i=0; i<numbers.length; i++){
     
   // Additionner systématiquement le nombre à valeur de ma variable sum
-       sum=sum+numbers[i];
+       sum +=numbers[i];
   }
   
   return sum; 
@@ -85,7 +85,7 @@ function averageWordLength(wordsArr) {
   for (let i=0; i<wordsArr.length; i++){
     
     //additionner le nombre de caractères pour chaque nouveau mot
-    wordsArrSum = wordsArrSum+wordsArr[i].length }
+    wordsArrSum +=wordsArr[i].length }
     
     //effectuer la moyenne et retoruner sa valeur
    return wordsArrSum/wordsArr.length;
@@ -182,7 +182,7 @@ function howManyTimes(wordsCount,word) {
     if (word===wordsCount[i]){
       
       //alors compter une réccurence
-      counter=counter+1;
+      counter +=1;
       
     }
   }
