@@ -45,7 +45,12 @@ function sum() {}
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(numbersAvg) {
-  return sumNumbers(numbersAvg)/numbersAvg.length
+  if (numbersAvg.length === 0){
+    return null;
+  }else{
+    return sumNumbers(numbersAvg)/numbersAvg.length
+  }
+
 }
 
 console.log(averageNumbers(numbersAvg))
@@ -54,11 +59,15 @@ console.log(averageNumbers(numbersAvg))
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
 function averageWordLength(wordsArr) {
-  var countLetters=0;
-  for (let i = 0; i < wordsArr.length; i++){
-  countLetters+=wordsArr[i].length;
+  var countLetters= 0;
+  if (wordsArr.length === 0){
+    return null;
+  }else{
+    for (let i = 0; i < wordsArr.length; i++){
+      countLetters+=wordsArr[i].length;
+      }
+      return countLetters/wordsArr.length;
   }
-  return countLetters/wordsArr.length;
 }
 
 console.log(averageWordLength(wordsArr))
@@ -82,7 +91,11 @@ const wordsUnique = [
   'bring'
 ];
 function uniquifyArray(allData) {
-  return allData.filter((value, index)=>allData.indexOf(value)===index);
+  if (allData.length === 0){
+    return null;
+  }else{
+    return allData.filter((value, index)=>allData.indexOf(value)===index);
+  }
 }
 
 console.log(uniquifyArray(wordsUnique))
@@ -92,12 +105,14 @@ console.log(uniquifyArray(wordsUnique))
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
 function doesWordExist(wordsFind, i) {
-  return wordsFind.includes(i)
+  if (wordsFind.length === 0){
+    return null;
+  }else{
+    return wordsFind.includes(i)
+  }
 }
 
 console.log(doesWordExist(wordsFind, 'starting'))
-
-
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -114,9 +129,25 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(wordsCount){
+  let counts = {};
+  if (wordsCount.length === 0){
+    return 0;
+  }else if (wordsCount.length === 1){
+    return 1;
+  }else{
+  for(let i= 0; i < wordsCount.length; i++){
+    if (counts[wordsCount[i]]){
+      counts[wordsCount[i]] += 1;
+    }else{
+      counts[wordsCount[i]] = 1;
+    }
+  }
+}
+  console.log(counts);
+}
 
-
+howManyTimes(wordsCount);
 
 // Iteration #8: Bonus
 const matrix = [
